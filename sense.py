@@ -7,7 +7,6 @@ sense = SenseHat()
 sense.clear()
 
 tmax = 32
-tmin = 8
 
 time_seconds = 10
 
@@ -18,7 +17,7 @@ while True:
     writeTemp(temp)    
     print(temp)
 
-    temp = int(temp/4) - tmin
+    temp = round(int(temp/4),2)
 
     for x in range(0, 8):
         for y in range(0, temp):
